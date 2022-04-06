@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerCountDown : MonoBehaviour
@@ -8,15 +9,21 @@ public class TimerCountDown : MonoBehaviour
     private TextMeshProUGUI target;
     private float time;
 
+    private bool stop = false;
+    private Button button;
+
     private void Start()
     {
         target = FindObjectOfType<TextMeshProUGUI>();
+        button = FindObjectOfType<Button>();
+
         time = Time.time;
+        button.onClick.AddListener(OnButtonClick);
     }
 
     private void Update()
     {
-        if (Time.time >= time + 1f && TimeInMinutes > 0)
+        if (Time.time >= time + 1f && TimeInMinutes > 0 && !stop)
         {
             TimeInMinutes--;
             time = Time.time;
@@ -29,5 +36,10 @@ public class TimerCountDown : MonoBehaviour
         {
             target.SetText(TimeInMinutes.ToString());
         }
+    }
+
+    private void OnButtonClick()
+    {
+        stop = true;
     }
 }
