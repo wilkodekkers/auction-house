@@ -22,8 +22,7 @@ public class TimerCountDown : MonoBehaviour
         priceButton = GameObject.Find("PriceButton").GetComponent<Button>();
 
         time = Time.time;
-        button.onClick.AddListener(OnButtonClick);
-        priceButton.onClick.AddListener(OnButtonClick);
+        button.onClick.AddListener(() => stop = true);
     }
 
     private void Update()
@@ -43,10 +42,5 @@ public class TimerCountDown : MonoBehaviour
             timerTarget.SetText(TimeInMinutes.ToString());
             priceButton.GetComponentInChildren<TextMeshProUGUI>().SetText(StartPrice.ToString());
         }
-    }
-
-    private void OnButtonClick()
-    {
-        stop = true;
     }
 }
