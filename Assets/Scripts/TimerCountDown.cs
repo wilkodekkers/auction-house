@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class TimerCountDown : MonoBehaviour
 {
     [SerializeField][Range(0, 30)] private int TimeInMinutes = 5;
-    private TextMeshProUGUI target;
+    [SerializeField][Range(0, 100000)] private float StartPrice = 69420F;
+
+    private TextMeshProUGUI timerTarget;
+    private Button priceButton;
     private float time;
 
     private bool stop = false;
@@ -14,11 +17,13 @@ public class TimerCountDown : MonoBehaviour
 
     private void Start()
     {
-        target = FindObjectOfType<TextMeshProUGUI>();
+        timerTarget = FindObjectOfType<TextMeshProUGUI>();
         button = FindObjectOfType<Button>();
+        priceButton = GameObject.Find("PriceButton").GetComponent<Button>();
 
         time = Time.time;
         button.onClick.AddListener(OnButtonClick);
+        priceButton.onClick.AddListener(OnButtonClick);
     }
 
     private void Update()
@@ -26,15 +31,17 @@ public class TimerCountDown : MonoBehaviour
         if (Time.time >= time + 1f && TimeInMinutes > 0 && !stop)
         {
             TimeInMinutes--;
+            StartPrice *= 0.98f;
             time = Time.time;
         }
     }
 
     private void FixedUpdate()
     {
-        if (int.Parse(target.text) != TimeInMinutes)
+        if (int.Parse(timerTarget.text) != TimeInMinutes)
         {
-            target.SetText(TimeInMinutes.ToString());
+            timerTarget.SetText(TimeInMinutes.ToString());
+            priceButton.GetComponentInChildren<TextMeshProUGUI>().SetText(StartPrice.ToString());
         }
     }
 
