@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AuctionCountdownStart : MonoBehaviour
@@ -15,6 +16,8 @@ public class AuctionCountdownStart : MonoBehaviour
         timer = Time.time;
         auctionStartButton = GameObject.Find("ButtonAuctionStart").GetComponent<Button>();
         buttonText = auctionStartButton.GetComponentInChildren<TextMeshProUGUI>();
+
+        auctionStartButton.onClick.AddListener(() => SceneManager.LoadScene("BidGame"));
     }
 
     void Update()
