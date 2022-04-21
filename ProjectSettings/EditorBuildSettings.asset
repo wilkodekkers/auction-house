@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Product_Info.unity
     guid: 19b9d3e6f5e092348b103c824b41d0dc
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/UpcomingAuction.unity
+    guid: ce875bf177cc7ea4f8fd89c0de5e6227
   m_configObjects: {}
