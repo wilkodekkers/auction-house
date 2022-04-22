@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MoveModel : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         if (Input.touchCount == 1)
@@ -16,10 +15,8 @@ public class MoveModel : MonoBehaviour
             if (touch0.phase == TouchPhase.Moved)
             {
                 var rotation = new Vector3(0f, -touch0.deltaPosition.x, 0f);
-
                 GameObject.Find("Pivot").transform.Rotate(rotation * 0.1f);
             }
-
         }
     }
 }
