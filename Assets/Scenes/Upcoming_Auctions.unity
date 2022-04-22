@@ -1945,7 +1945,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 986154122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041101955}
+        m_TargetAssemblyTypeName: MovetoScene, Assembly-CSharp
+        m_MethodName: ButtonMoveScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JoinedAuctions
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &986154122
 MonoBehaviour:
   m_ObjectHideFlags: 0
