@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MovetoScene : MonoBehaviour
 {
-    public void ButtonMoveScene() 
+    [SerializeField] private string levelName;
+
+    public void ButtonMoveScene(string levelName) 
     {
-        SceneManager.LoadScene("UpcomingAuction");
-        Debug.Log("Tapped");
+        SceneManager.LoadScene(levelName);
     }
 }
