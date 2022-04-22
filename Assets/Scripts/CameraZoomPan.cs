@@ -9,16 +9,15 @@ public class CameraZoomPan : MonoBehaviour
 
     private void Awake()
     {
-        if(Camera == null)
+        if (Camera == null)
         {
             Camera = Camera.main;
         }
     }
 
-
     void Update()
     {
-        if(Input.touchCount > 0)
+        if (Input.touchCount > 0)
         {
             plane.SetNormalAndPosition(transform.up, transform.position);
         }
@@ -47,41 +46,37 @@ public class CameraZoomPan : MonoBehaviour
             var zoom = Vector3.Distance(pos1, pos2) /
                 Vector3.Distance(pos1b, pos2b);
 
-            if(zoom == 0 || zoom > 10)
+            if (zoom == 0 || zoom > 10)
             {
                 return;
             }
             Camera.transform.position = Vector3.LerpUnclamped(pos1, Camera.transform.position, 1 / zoom);
         }
-
     }
 
     protected Vector3 PlanePositionDelta(Touch touch)
     {
-        if(touch.phase != TouchPhase.Moved)
+        if (touch.phase != TouchPhase.Moved)
         {
             return Vector3.zero;
         }
 
         var rayBefore = Camera.ScreenPointToRay(touch.position - touch.deltaPosition);
         var rayNow = Camera.ScreenPointToRay(touch.position);
-        if(plane.Raycast(rayBefore, out var enterBefore) && plane.Raycast(rayNow, out var enterNow))
+        if (plane.Raycast(rayBefore, out var enterBefore) && plane.Raycast(rayNow, out var enterNow))
         {
             return rayBefore.GetPoint(enterBefore) - rayNow.GetPoint(enterNow);
         }
-
         return Vector3.zero;
     }
 
     protected Vector3 PlanePosition(Vector2 screenPos)
     {
         var rayNow = Camera.ScreenPointToRay(screenPos);
-        if(plane.Raycast(rayNow, out var enterNow))
+        if (plane.Raycast(rayNow, out var enterNow))
         {
             return rayNow.GetPoint(enterNow);
         }
         return Vector3.zero;
     }
-
-
 }
