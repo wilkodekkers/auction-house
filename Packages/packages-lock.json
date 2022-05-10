@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "com.google.external-dependency-manager": {
-      "version": "file:C:/Users/jesse/Downloads/com.google.external-dependency-manager-1.2.170.tgz",
+      "version": "file:C:/Users/jesse/Downloads/com.google.external-dependency-manager-1.2.170 (1).tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
     },
     "com.google.firebase.app": {
-      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.app-8.9.0.tgz",
+      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.app-8.10.1.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -15,19 +15,19 @@
       }
     },
     "com.google.firebase.auth": {
-      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.auth-8.9.0.tgz",
+      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.auth-8.10.1.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
-        "com.google.firebase.app": "8.9.0"
+        "com.google.firebase.app": "8.10.1"
       }
     },
     "com.google.firebase.database": {
-      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.database-8.9.0.tgz",
+      "version": "file:C:/Users/jesse/Downloads/com.google.firebase.database-8.10.1.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
-        "com.google.firebase.auth": "8.9.0"
+        "com.google.firebase.auth": "8.10.1"
       }
     },
     "com.unity.collab-proxy": {
