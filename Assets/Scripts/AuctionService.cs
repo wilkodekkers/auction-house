@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 
 public class AuctionService : MonoBehaviour
 {
-    private const string URL = "https://localhost:7254/api/auctionhouse/auctions";
+    private const string BASE_ENDPOINT = "https://localhost:7254/api/auctionhouse";
     private List<Auction> auctions = new List<Auction>();
 
     private void Start()
@@ -16,10 +16,10 @@ public class AuctionService : MonoBehaviour
 
     private IEnumerator GetAuctions()
     {
-        using (UnityWebRequest request = UnityWebRequest.Get(URL))
+        using (UnityWebRequest request = UnityWebRequest.Get($"{BASE_ENDPOINT}/auctions"))
         {
             yield return request.SendWebRequest();
-            if (request.isHttpError || request.isNetworkError)
+            if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ConnectionError)
             {
                 Debug.LogError(request.error);
             }
