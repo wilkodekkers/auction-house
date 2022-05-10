@@ -13,6 +13,8 @@ public class LoginManager : MonoBehaviour
 
     private void Start()
     {
+
+        SetupFireBase();
         email = GameObject.Find("email_input_field").GetComponentInChildren<TMP_InputField>();
         password = GameObject.Find("password_input_field").GetComponentInChildren<TMP_InputField>();
         error = GameObject.Find("error_text").GetComponent<TextMeshProUGUI>();
