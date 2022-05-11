@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "949377542276",
+    "project_id": "auctionhouse-9618d",
+    "firebase_url": "https://auctionhouse-9618d-default-rtdb.europe-west1.firebasedatabase.app/",
+    "storage_bucket": "auctionhouse-9618d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949377542276:android:cf84995935184f92683ad1",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.AuctionHouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949377542276-ovk3ra0u69fg3tqnoecggko1jvjgo828.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5-eGjgQu7QTluQFQ0WVCZdF6mPesCZgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949377542276-ovk3ra0u69fg3tqnoecggko1jvjgo828.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
