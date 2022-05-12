@@ -17,8 +17,8 @@ public class TimerCountDown : MonoBehaviour
 
     private void Start()
     {
-        timerTarget = FindObjectOfType<TextMeshProUGUI>();
-        button = FindObjectOfType<Button>();
+        timerTarget = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
+        button = GameObject.Find("BidButton").GetComponent<Button>();
         priceButton = GameObject.Find("PriceButton").GetComponent<Button>();
 
         time = Time.time;
