@@ -16,34 +16,28 @@ public class database_test : MonoBehaviour
     {
         reference = FirebaseDatabase.DefaultInstance.RootReference;
 
-        reference.Child("TestData").Child("data").GetValueAsync().ContinueWith(task =>
-        {
-            if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                StartPrice = float.Parse(snapshot.Child("Bid").Value.ToString());
-            }
-        });
-
-
         button = GameObject.Find("BidButton").GetComponent<Button>();
         priceButton = GameObject.Find("PriceButton").GetComponent<Button>();
 
         button.onClick.AddListener(PriceUp);
+        reference.Child("TestData").Child("data").Child("Bid").ValueChanged += HandleValueChanged;
     }
 
     private void PriceUp()
     {
         reference.Child("TestData").Child("data").Child("Bid").SetValueAsync(StartPrice + 1000);
 
-        reference.Child("TestData").Child("data").GetValueAsync().ContinueWith(task =>
+    }
+
+    private void HandleValueChanged(object sender, ValueChangedEventArgs args)
+    {
+        if (args.DatabaseError != null)
         {
-            if (task.IsCompleted)
-            {
-                DataSnapshot snapshot = task.Result;
-                StartPrice = float.Parse(snapshot.Child("Bid").Value.ToString());
-            }
-        });
+            Debug.LogError(args.DatabaseError.Message);
+            return;
+        }
+
+        StartPrice = float.Parse(args.Snapshot.Value.ToString());
     }
 
     private void FixedUpdate()

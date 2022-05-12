@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using Firebase.Database;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerOpbieden : MonoBehaviour
