@@ -1,10 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerOpbieden : MonoBehaviour
 {
-    [SerializeField][Range(0, 30)] private int TimeInMinutes = 20;
+    [SerializeField][Range(0, 30)] private int TimeInMinutes = 5;
 
     private TextMeshProUGUI timerTarget;
     private float time;
@@ -24,6 +25,11 @@ public class TimerOpbieden : MonoBehaviour
         {
             TimeInMinutes--;
             time = Time.time;
+            Debug.Log(TimeInMinutes);
+        }
+        if(TimeInMinutes <= 0f)
+        {
+            GameObject.Find("BidButton").GetComponent<Button>().interactable = false;
         }
     }
 
@@ -33,5 +39,6 @@ public class TimerOpbieden : MonoBehaviour
         {
             timerTarget.SetText(TimeInMinutes.ToString());
         }
+
     }
 }
