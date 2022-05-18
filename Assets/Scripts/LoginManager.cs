@@ -26,7 +26,7 @@ public class LoginManager : MonoBehaviour
 
         if (email.text == "developer@inchainge.com" && password.text == "inchainge")
         {
-            SceneManager.LoadScene("bid_game_database_test");
+            SceneManager.LoadScene("bid_game_increase");
         }
         else
         {
