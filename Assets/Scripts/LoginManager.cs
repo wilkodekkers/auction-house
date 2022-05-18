@@ -22,9 +22,11 @@ public class LoginManager : MonoBehaviour
 
     private void Login()
     {
+        PlayerInfo.email = email.text;
+
         if (email.text == "developer@inchainge.com" && password.text == "inchainge")
         {
-            SceneManager.LoadScene("upcoming_auctions");
+            SceneManager.LoadScene("bid_game_database_test");
         }
         else
         {
