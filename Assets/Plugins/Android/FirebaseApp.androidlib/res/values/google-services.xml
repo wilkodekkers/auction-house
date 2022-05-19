@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="firebase_database_url" translatable="false">https://auctionhouse-6fbe9-default-rtdb.europe-west1.firebasedatabase.app</string>
+  <string name="gcm_defaultSenderId" translatable="false">732972257947</string>
+  <string name="google_storage_bucket" translatable="false">auctionhouse-6fbe9.appspot.com</string>
+  <string name="project_id" translatable="false">auctionhouse-6fbe9</string>
+  <string name="google_api_key" translatable="false">AIzaSyBv7VTW8oLzrPwwS1lwfukmlcJjm6mgUkw</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBv7VTW8oLzrPwwS1lwfukmlcJjm6mgUkw</string>
+  <string name="google_app_id" translatable="false">1:732972257947:android:8e0ad56c3c43bd75db6c3e</string>
+  <string name="default_web_client_id" translatable="false">732972257947-1od8u1t0k9k7e0a5n44v5pculup9jpt2.apps.googleusercontent.com</string>
+</resources>
