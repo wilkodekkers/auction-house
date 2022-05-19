@@ -14,6 +14,8 @@ public class TimerOpbieden : MonoBehaviour
 
     public void Start()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
         timerTarget = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
 
         time = Time.time;
