@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/product_info.unity
+    path: Assets/Scenes/Product_Info.unity
     guid: 19b9d3e6f5e092348b103c824b41d0dc
   - enabled: 1
     path: Assets/Scenes/bid_game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/upcomming_auctions.unity
+    path: Assets/Scenes/upcoming_auctions.unity
     guid: 288c047dd710c7e44807c04fc2561070
   - enabled: 1
-    path: Assets/Scenes/upcomming_auctions_details.unity
+    path: Assets/Scenes/upcoming_auctions_details.unity
     guid: ce875bf177cc7ea4f8fd89c0de5e6227
   - enabled: 1
     path: Assets/Scenes/ongoing_auctions.unity
@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/my_bids.unity
     guid: 4d7a0c31a1370c244a72d6bf607f8b28
+  - enabled: 1
+    path: Assets/Scenes/bid_game_increase.unity
+    guid: 3631e300c4fca0a499c9b665a7b9fc40
   m_configObjects: {}
