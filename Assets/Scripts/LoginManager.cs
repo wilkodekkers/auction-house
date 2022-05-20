@@ -24,7 +24,7 @@ public class LoginManager : MonoBehaviour
     {
         PlayerInfo.email = email.text;
 
-        if (email.text == "developer@inchainge.com" && password.text == "inchainge")
+        if (email.text == "Amouranth" && password.text == "a")
         {
             SceneManager.LoadScene("upcoming_auctions");
         }

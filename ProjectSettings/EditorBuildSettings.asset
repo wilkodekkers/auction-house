@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/my_bids.unity
     guid: 4d7a0c31a1370c244a72d6bf607f8b28
   - enabled: 1
-    path: Assets/Scenes/bid_game_increase.unity
+    path: Assets/Scenes/bid_game_database_test.unity
     guid: 3631e300c4fca0a499c9b665a7b9fc40
   m_configObjects: {}
