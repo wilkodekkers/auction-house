@@ -425,22 +425,30 @@ PrefabInstance:
     - target: {fileID: 1020128941361538192, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.x
+<<<<<<< Updated upstream
       value: 64.8398
       objectReference: {fileID: 0}
     - target: {fileID: 1020128941361538192, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 54.954
+=======
+      value: 72
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128941361538192, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< Updated upstream
       value: 95.21988
       objectReference: {fileID: 0}
     - target: {fileID: 1020128941361538192, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -67.07
+=======
+      value: 98.80002
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128941361538193, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
@@ -615,22 +623,30 @@ PrefabInstance:
     - target: {fileID: 1020128942672519594, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.x
+<<<<<<< Updated upstream
       value: 64.8399
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942672519594, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 54.954
+=======
+      value: 72
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942672519594, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< Updated upstream
       value: -41.135895
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942672519594, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -66.93105
+=======
+      value: -57.999817
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942674305230, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
@@ -640,16 +656,21 @@ PrefabInstance:
     - target: {fileID: 1020128942674305230, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.x
+<<<<<<< Updated upstream
       value: 60.5437
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942674305230, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 54.954
+=======
+      value: 72
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942674305230, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< Updated upstream
       value: -116
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942674305230, guid: fc6bbbbe0738d924b81b622b6889c7c0,
@@ -666,6 +687,9 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 50
+=======
+      value: -140.00003
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942849813419, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
@@ -679,6 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020128942849813419, guid: fc6bbbbe0738d924b81b622b6889c7c0,
         type: 3}
+<<<<<<< Updated upstream
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
@@ -701,6 +726,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -11.4892
+=======
+      propertyPath: m_SizeDelta.x
+      value: 450
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6bbbbe0738d924b81b622b6889c7c0, type: 3}
@@ -1103,6 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471494937}
   - component: {fileID: 1471494936}
+  - component: {fileID: 1471494938}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1187,6 +1217,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1471494938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471494935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1698063807
 GameObject:
   m_ObjectHideFlags: 0
