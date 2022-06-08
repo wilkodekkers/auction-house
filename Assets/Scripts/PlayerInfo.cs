@@ -1,4 +1,4 @@
 public static class PlayerInfo
 {
-    public static string email = "Wilko";
+    public static string email;
 }
