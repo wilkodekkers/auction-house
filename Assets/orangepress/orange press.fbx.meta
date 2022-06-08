@@ -2,7 +2,55 @@ fileFormatVersion: 2
 guid: 9272f71c7bbcae944a387e5a4d7b3594
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -1603367796504212052
+    second: holder|Empty.001Action
+  - first:
+      74: -7028887624144576268
+    second: holder|EmptyAction.001
+  - first:
+      74: 8973234688004904676
+    second: holder|holderAction
+  - first:
+      74: 7096897900394864295
+    second: holder|holderAction.001
+  - first:
+      74: -1855855767320855654
+    second: holder.001|Empty.001Action
+  - first:
+      74: 3855171157550485650
+    second: holder.001|EmptyAction.001
+  - first:
+      74: -2682529045093050792
+    second: holder.001|holderAction
+  - first:
+      74: -7383836520787753915
+    second: holder.001|holderAction.001
+  - first:
+      74: -1779458952936665273
+    second: Empty|Empty.001Action
+  - first:
+      74: 523742727469920145
+    second: Empty|EmptyAction.001
+  - first:
+      74: 4292847432774618475
+    second: Empty|holderAction
+  - first:
+      74: -3434846148351418465
+    second: Empty|holderAction.001
+  - first:
+      74: -6949670309919530470
+    second: Empty.001|Empty.001Action
+  - first:
+      74: 7898733980060134528
+    second: Empty.001|EmptyAction.001
+  - first:
+      74: -7669447656543254877
+    second: Empty.001|holderAction
+  - first:
+      74: 1974278409341301498
+    second: Empty.001|holderAction.001
   externalObjects: {}
   materials:
     materialImportMode: 2
