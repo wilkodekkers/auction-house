@@ -19,7 +19,7 @@ public class AuctionService : MonoBehaviour
 
     private IEnumerator GetAuctions()
     {
-        using (UnityWebRequest request = UnityWebRequest.Get($"{BASE_ENDPOINT}/auctions"))
+        using (UnityWebRequest request = UnityWebRequest.Get($"{BASE_ENDPOINT}/Auctions/upcoming"))
         {
             yield return request.SendWebRequest();
             if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ConnectionError)

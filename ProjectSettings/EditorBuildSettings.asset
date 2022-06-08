@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/log_in.unity
+    guid: eaf7d6b536f538b4a859c74c2eeba47b
+  - enabled: 1
     path: Assets/Scenes/Product_Info.unity
     guid: 19b9d3e6f5e092348b103c824b41d0dc
   - enabled: 1
@@ -15,17 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/upcoming_auctions.unity
     guid: 288c047dd710c7e44807c04fc2561070
   - enabled: 1
-    path: Assets/Scenes/upcoming_auctions_details.unity
-    guid: ce875bf177cc7ea4f8fd89c0de5e6227
+    path: Assets/Scenes/Mathijs.unity
+    guid: e1672d8ffa8e28340aa20253a43e91ab
   - enabled: 1
     path: Assets/Scenes/ongoing_auctions.unity
     guid: 37893c7c2f5cdaf40bd4e59cf8d016ba
   - enabled: 1
-    path: Assets/Scenes/log_in.unity
-    guid: eaf7d6b536f538b4a859c74c2eeba47b
-  - enabled: 1
     path: Assets/Scenes/funds.unity
     guid: 9a799cbaafa47184db3784c14109d961
+  - enabled: 1
+    path: Assets/Scenes/Product_Won.unity
+    guid: 512c82ae250b4e843ace775379ff801d
   - enabled: 1
     path: Assets/Scenes/my_bids.unity
     guid: 4d7a0c31a1370c244a72d6bf607f8b28
