@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Free Stylized Skybox.meta
 guid: 41a7f19f8923a2d4d86700efd883be56
+========
+guid: 6953ca6a2dba6a642abc25c20195238e
+>>>>>>>> origin/Development:Assets/Free Stylized Skybox/CubeMap/Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
