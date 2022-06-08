@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
@@ -12,6 +13,8 @@ public class TimerOpbieden : MonoBehaviour
 
     private bool stop = false;
 
+    private RealTimeDatabase RealTimeDatabase { get; set; }
+
     public void Start()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -19,6 +22,8 @@ public class TimerOpbieden : MonoBehaviour
         timerTarget = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
 
         time = Time.time;
+
+        RealTimeDatabase = FindObjectOfType<RealTimeDatabase>();
     }
 
     private void Update()
@@ -29,9 +34,23 @@ public class TimerOpbieden : MonoBehaviour
             time = Time.time;
             Debug.Log(TimeInMinutes);
         }
-        if(TimeInMinutes <= 0f)
+        else if (TimeInMinutes <= 0f)
         {
             GameObject.Find("BidButton").GetComponent<Button>().interactable = false;
+            CheckWinner();
+        }
+    }
+
+    private void CheckWinner()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+        if (RealTimeDatabase.WinningPlayerName == PlayerInfo.email)
+        {
+            SceneManager.LoadScene("Product_Won");
+        }
+        else
+        {
+            SceneManager.LoadScene("upcoming_auctions");
         }
     }
 
@@ -41,6 +60,5 @@ public class TimerOpbieden : MonoBehaviour
         {
             timerTarget.SetText(TimeInMinutes.ToString());
         }
-
     }
 }

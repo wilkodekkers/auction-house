@@ -6,7 +6,7 @@ using TMPro;
 public class RealTimeDatabase : MonoBehaviour
 {
     private float StartPrice;
-    private string winningPlayerName;
+    public string WinningPlayerName { get; set; }
 
     private Button priceButton;
     private Button bidButton;
@@ -29,10 +29,10 @@ public class RealTimeDatabase : MonoBehaviour
 
     private void PriceUp()
     {
-        winningPlayerName = PlayerInfo.email;
+        WinningPlayerName = PlayerInfo.email;
 
         reference.Child("TestData").Child("data").Child("Bid").SetValueAsync(StartPrice + 1000);
-        reference.Child("TestData").Child("data").Child("Email").SetValueAsync(winningPlayerName);
+        reference.Child("TestData").Child("data").Child("Email").SetValueAsync(WinningPlayerName);
     }
 
     private void HandleValuePriceChanged(object sender, ValueChangedEventArgs args)
@@ -54,12 +54,12 @@ public class RealTimeDatabase : MonoBehaviour
             return;
         }
 
-        winningPlayerName = args.Snapshot.Value.ToString();
+        WinningPlayerName = args.Snapshot.Value.ToString();
     }
 
     private void FixedUpdate()
     {
         priceButton.GetComponentInChildren<TextMeshProUGUI>().SetText(StartPrice.ToString());
-        winningPlayer.GetComponentInChildren<TextMeshProUGUI>().SetText(winningPlayerName);
+        winningPlayer.GetComponentInChildren<TextMeshProUGUI>().SetText(WinningPlayerName);
     }
 }
