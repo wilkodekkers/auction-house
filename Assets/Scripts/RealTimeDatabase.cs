@@ -33,6 +33,8 @@ public class RealTimeDatabase : MonoBehaviour
 
         reference.Child("TestData").Child("data").Child("Bid").SetValueAsync(StartPrice + 1000);
         reference.Child("TestData").Child("data").Child("Email").SetValueAsync(winningPlayerName);
+        Debug.Log(reference.Child("TestData").Child("data").Child("Email").ToString());
+
     }
 
     private void HandleValuePriceChanged(object sender, ValueChangedEventArgs args)
