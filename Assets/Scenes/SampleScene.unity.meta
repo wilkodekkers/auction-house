@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/SampleScene.unity.meta
 guid: 07e9b8c4796bac4479965dba3e03f3de
+========
+guid: 41a7f19f8923a2d4d86700efd883be56
+folderAsset: yes
+>>>>>>>> origin/Development:Assets/Free Stylized Skybox.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Character.meta
 guid: fe3ef70ceef34f34d8f0248002919a9f
+========
+guid: 8f1c5a5cb73b94a419410c4554e1dd97
+>>>>>>>> origin/Development:Assets/Free Stylized Skybox/CubeMap.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
