@@ -7,6 +7,7 @@ public class MovetoScene : MonoBehaviour
 
     public void ButtonMoveScene(string levelName)
     {
+        Screen.orientation = ScreenOrientation.Portrait;
         SceneManager.LoadScene(levelName);
     }
 }
