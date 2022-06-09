@@ -17,7 +17,7 @@ public class AuctionCountdownStart : MonoBehaviour
         auctionStartButton = GameObject.Find("ButtonAuctionStart").GetComponent<Button>();
         buttonText = auctionStartButton.GetComponentInChildren<TextMeshProUGUI>();
 
-        auctionStartButton.onClick.AddListener(() => SceneManager.LoadScene("bid_game"));
+        auctionStartButton.onClick.AddListener(() => SceneManager.LoadScene("bid_game_database_test"));
     }
 
     void Update()

@@ -134,7 +134,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: bid_game_database_test
+          m_StringArgument: Product_Info
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7919484191367257376
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7bcaedc5e89424fbdbacfd51840af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: bid_game_database_test
+  levelName: Product_Info
 --- !u!1 &3472978582533296243
 GameObject:
   m_ObjectHideFlags: 0
