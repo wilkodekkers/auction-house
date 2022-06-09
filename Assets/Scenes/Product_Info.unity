@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,7 +250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412764061
 GameObject:
@@ -710,6 +710,51 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 674733323}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &756918863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 756918864}
+  - component: {fileID: 756918865}
+  m_Layer: 0
+  m_Name: Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &756918864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756918863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.782, y: 5.044, z: 12.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1736920347}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &756918865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756918863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed27a72c4d487447990d65f3cb2059d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1137267269
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +927,7 @@ RectTransform:
   - {fileID: 674733324}
   - {fileID: 412764062}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -894,27 +939,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 756918864}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.98
+      value: 2.802
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6070623
+      value: -0.4369378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.54
+      value: -0.22000027
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
         type: 3}
@@ -1186,7 +1231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1471494938
 MonoBehaviour:
@@ -1482,6 +1527,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725012505}
   m_CullTransparentMesh: 1
+--- !u!4 &1736920347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a33064b73dce8224d9af6935efe22d8e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1413387156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1759005424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1813,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924020343
 GameObject:
