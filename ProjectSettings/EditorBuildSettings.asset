@@ -12,14 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Product_Info.unity
     guid: 19b9d3e6f5e092348b103c824b41d0dc
   - enabled: 1
-    path: Assets/Scenes/bid_game.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/upcoming_auctions.unity
     guid: 288c047dd710c7e44807c04fc2561070
-  - enabled: 1
-    path: Assets/Scenes/Mathijs.unity
-    guid: e1672d8ffa8e28340aa20253a43e91ab
   - enabled: 1
     path: Assets/Scenes/ongoing_auctions.unity
     guid: 37893c7c2f5cdaf40bd4e59cf8d016ba
