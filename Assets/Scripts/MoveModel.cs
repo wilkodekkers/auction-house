@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MoveModel : MonoBehaviour
 {
+    void Start()
+    {
+        Debug.Log(PlayerPrefs.GetString("model"));
+    }
+
     void Update()
     {
         if (Input.touchCount == 1)
