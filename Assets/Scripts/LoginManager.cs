@@ -5,32 +5,30 @@ using UnityEngine.UI;
 
 public class LoginManager : MonoBehaviour
 {
-    private TMP_InputField email;
-    private TMP_InputField password;
-    private TextMeshProUGUI error;
-    private Button loginButton;
+    private TMP_InputField _email;
+    private TMP_InputField _password;
+    private TextMeshProUGUI _error;
+    private Button _loginButton;
 
     private void Start()
     {
-        email = GameObject.Find("email_input_field").GetComponentInChildren<TMP_InputField>();
-        password = GameObject.Find("password_input_field").GetComponentInChildren<TMP_InputField>();
-        error = GameObject.Find("error_text").GetComponent<TextMeshProUGUI>();
-        loginButton = GameObject.Find("login_button").GetComponent<Button>();
+        _email = GameObject.Find("email_input_field").GetComponentInChildren<TMP_InputField>();
+        _password = GameObject.Find("password_input_field").GetComponentInChildren<TMP_InputField>();
+        _error = GameObject.Find("error_text").GetComponent<TextMeshProUGUI>();
+        _loginButton = GameObject.Find("login_button").GetComponent<Button>();
 
-        loginButton.onClick.AddListener(Login);
+        _loginButton.onClick.AddListener(Login);
     }
 
     private void Login()
     {
-        PlayerInfo.email = email.text;
+        if (_email.text == "" && _password.text == "")
+        {
+            _error.text = "Your credentials does not match!";
+            return;
+        }
 
-        if (email.text != "" && password.text != "")
-        {
-            SceneManager.LoadScene("upcoming_auctions");
-        }
-        else
-        {
-            error.text = "Your credentials does not match!";
-        }
+        PlayerPrefs.SetString("email", _email.text);
+        SceneManager.LoadScene("upcoming_auctions");
     }
 }

@@ -44,7 +44,8 @@ public class TimerOpbieden : MonoBehaviour
     private void CheckWinner()
     {
         Screen.orientation = ScreenOrientation.Portrait;
-        if (RealTimeDatabase.WinningPlayerName == PlayerInfo.email)
+        var email = PlayerPrefs.GetString("email");
+        if (RealTimeDatabase.WinningPlayerName == email)
         {
             SceneManager.LoadScene("Product_Won");
         }
