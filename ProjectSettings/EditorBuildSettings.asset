@@ -24,8 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Product_Won.unity
     guid: 512c82ae250b4e843ace775379ff801d
   - enabled: 1
-    path: Assets/Scenes/my_bids_old.unity
-    guid: 4d7a0c31a1370c244a72d6bf607f8b28
+    path: Assets/Scenes/my_bids.unity
+    guid: 461e382eec4de4434b5d81fcdd48159d
   - enabled: 1
     path: Assets/Scenes/bid_game_database_test.unity
     guid: 3631e300c4fca0a499c9b665a7b9fc40
