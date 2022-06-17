@@ -15,7 +15,7 @@ public class LoadModel : MonoBehaviour
             "contract" => LoadContractModel(),
             "bottlingline" => LoadBottlingLine(),
             "press" => Instantiate(pressModel, Position, Quaternion.identity),
-            "fridge" => Instantiate(fridgeModel, Position, Quaternion.identity),
+            "fridge" => LoadFridge(),
             _ => Instantiate(bottlingLineModel, Position, Quaternion.identity)
         };
         Go.transform.SetParent(transform);
@@ -35,6 +35,14 @@ public class LoadModel : MonoBehaviour
         var Model = Instantiate(bottlingLineModel, transform.position, Quaternion.identity);
         Model.transform.localScale = new Vector3(.1f, .1f, .1f);
         Model.transform.position += new Vector3(-2f, .3f, -4f);
+
+        return Model;
+    }
+    
+    private GameObject LoadFridge()
+    {
+        var Model = Instantiate(fridgeModel, transform.position, Quaternion.identity);
+        Model.transform.localScale = new Vector3(.4f, .4f, .4f);
 
         return Model;
     }
