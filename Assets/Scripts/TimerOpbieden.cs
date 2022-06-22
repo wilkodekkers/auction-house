@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerOpbieden : MonoBehaviour
 {
-    private int TimeInMinutes;
+    private int TimeInSeconds;
     private TextMeshProUGUI timerTarget;
     private float time;
     private bool stop = false;
@@ -20,9 +20,9 @@ public class TimerOpbieden : MonoBehaviour
     {
         currentTime = DateTime.Now;
         //Needs to change to DateTime from database
-        auctionStopTime = currentTime.AddSeconds(15);
+        auctionStopTime = currentTime.AddSeconds(7);
         //Calculates how long until auction ends
-        TimeInMinutes = (int)(auctionStopTime - currentTime).TotalSeconds;
+        TimeInSeconds = (int)(auctionStopTime - currentTime).TotalSeconds;
 
         Screen.orientation = ScreenOrientation.LandscapeLeft;
 
@@ -35,13 +35,13 @@ public class TimerOpbieden : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= time + 1f && TimeInMinutes > 0 && !stop)
+        if (Time.time >= time + 1f && TimeInSeconds > 0 && !stop)
         {
-            TimeInMinutes--;
+            TimeInSeconds--;
             time = Time.time;
-            Debug.Log(TimeInMinutes);
+            Debug.Log(TimeInSeconds);
         }
-        else if (TimeInMinutes <= 0f)
+        else if (TimeInSeconds <= 0f)
         {
             GameObject.Find("BidButton").GetComponent<Button>().interactable = false;
             CheckWinner();
@@ -64,9 +64,9 @@ public class TimerOpbieden : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (int.Parse(timerTarget.text) != TimeInMinutes)
+        if (int.Parse(timerTarget.text) != TimeInSeconds)
         {
-            timerTarget.SetText(TimeInMinutes.ToString());
+            timerTarget.SetText(TimeInSeconds.ToString());
         }
     }
 }
