@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,17 +7,23 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerOpbieden : MonoBehaviour
 {
-    [SerializeField][Range(0, 30)] private int TimeInMinutes = 5;
-
+    private int TimeInMinutes;
     private TextMeshProUGUI timerTarget;
     private float time;
-
     private bool stop = false;
+    private DateTime currentTime;
+    private DateTime auctionStopTime;
 
     private RealTimeDatabase RealTimeDatabase { get; set; }
 
     public void Start()
     {
+        currentTime = DateTime.Now;
+        //Needs to change to DateTime from database
+        auctionStopTime = currentTime.AddSeconds(15);
+        //Calculates how long until auction ends
+        TimeInMinutes = (int)(auctionStopTime - currentTime).TotalSeconds;
+
         Screen.orientation = ScreenOrientation.LandscapeLeft;
 
         timerTarget = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
