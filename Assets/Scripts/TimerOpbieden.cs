@@ -11,17 +11,14 @@ public class TimerOpbieden : MonoBehaviour
     private TextMeshProUGUI timerTarget;
     private float time;
     private bool stop = false;
-    private DateTime currentTime;
-    private DateTime auctionStopTime;
 
     private RealTimeDatabase RealTimeDatabase { get; set; }
 
     public void Start()
     {
-        currentTime = DateTime.Now;
-        //Needs to change to DateTime from database
-        auctionStopTime = currentTime.AddSeconds(7);
-        //Calculates how long until auction ends
+        var currentTime = DateTime.Now;
+        var auctionStopTime = DateTime.Parse("Jul 7, 2022");
+        
         TimeInSeconds = (int)(auctionStopTime - currentTime).TotalSeconds;
 
         Screen.orientation = ScreenOrientation.LandscapeLeft;
