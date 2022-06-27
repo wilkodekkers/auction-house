@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,17 +7,20 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class TimerOpbieden : MonoBehaviour
 {
-    [SerializeField][Range(0, 30)] private int TimeInMinutes = 5;
-
+    private int TimeInSeconds;
     private TextMeshProUGUI timerTarget;
     private float time;
-
     private bool stop = false;
 
     private RealTimeDatabase RealTimeDatabase { get; set; }
 
     public void Start()
     {
+        var currentTime = DateTime.Now;
+        var auctionStopTime = DateTime.Parse("Jul 7, 2022");
+        
+        TimeInSeconds = (int)(auctionStopTime - currentTime).TotalSeconds;
+
         Screen.orientation = ScreenOrientation.LandscapeLeft;
 
         timerTarget = GameObject.Find("TimerText").GetComponent<TextMeshProUGUI>();
@@ -28,13 +32,13 @@ public class TimerOpbieden : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time >= time + 1f && TimeInMinutes > 0 && !stop)
+        if (Time.time >= time + 1f && TimeInSeconds > 0 && !stop)
         {
-            TimeInMinutes--;
+            TimeInSeconds--;
             time = Time.time;
-            Debug.Log(TimeInMinutes);
+            Debug.Log(TimeInSeconds);
         }
-        else if (TimeInMinutes <= 0f)
+        else if (TimeInSeconds <= 0f)
         {
             GameObject.Find("BidButton").GetComponent<Button>().interactable = false;
             CheckWinner();
@@ -57,9 +61,9 @@ public class TimerOpbieden : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (int.Parse(timerTarget.text) != TimeInMinutes)
+        if (int.Parse(timerTarget.text) != TimeInSeconds)
         {
-            timerTarget.SetText(TimeInMinutes.ToString());
+            timerTarget.SetText(TimeInSeconds.ToString());
         }
     }
 }
